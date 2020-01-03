@@ -1,0 +1,265 @@
+$font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// Colour Variables
+
+$white: #fff;
+$black: #000;
+$maroon: #83333e;
+$off-white: #f2f4f5;
+
+html,
+body {
+  font-family: $font;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1640px;
+  min-width: 1640px;
+  margin: 0 auto;
+  @media (max-width: 1440px) {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @media (max-width: 1280px) {
+    width: 976px;
+    min-width: 976px;
+  }
+  @media (max-width: 976px) {
+    width: 768px;
+    min-width: 768px;
+  }
+  @media (max-width: 768px) {
+    width: 345px;
+    min-width: 345px;
+  }
+}
+
+//Header
+
+header {
+  height: 800px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    .logo {
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 3px;
+        color: $black;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          margin: 0 20px;
+          text-decoration: none;
+          letter-spacing: 1.75px;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          color: $black;
+          &:last-child {
+            margin-right: 1rem;
+            border: 1px solid $black;
+            border-radius: 10px;
+            padding: 0.5rem;
+            &:hover {
+              background-color: red;
+              color: $white;
+            }
+          }
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Banner
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  position: relative;
+  height: 100vh;
+  margin-top: 30px;
+  .row {
+    position: relative;
+    .main-text {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      letter-spacing: 42px;
+      font-weight: 700;
+      color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 9;
+      @media (max-width: 1440px) {
+        font-size: 4.4rem;
+        letter-spacing: 36px;
+      }
+      @media (max-width: 980px) {
+        font-size: 2.5rem;
+        letter-spacing: 28px;
+      }
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+        letter-spacing: 28px;
+        line-height: 2rem;
+      }
+    }
+    .main-image {
+      width: 536px;
+      margin: 0 auto;
+      @media (max-width: 1440px) {
+        width: 426px;
+      }
+    }
+    .side-image {
+      width: 50px;
+      position: absolute;
+    }
+  }
+  .scroll {
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
+    color: $black;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 48px;
+  }
+  .fixed-misc {
+    position: fixed;
+    top: 50%;
+    right: -48px;
+    transform: rotate(-90deg);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
+    color: $white;
+    mix-blend-mode: difference;
+    z-index: 8;
+    @media (max-width: 1440px) {
+      right: -112px;
+    }
+  }
+}
+
+//About blurb
+
+.about-blurb {
+  padding: 48px 0;
+  background: $white;
+  position: relative;
+  .inner-blurb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content {
+      width: 33%;
+      @media (max-width: 1440px) {
+        width: 40%;
+      }
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 300;
+        margin: 40px 0 72px;
+      }
+      .btn-row {
+        a {
+          font-weight: 700;
+          font-size: 0.875rem;
+          letter-spacing: 1.5px;
+          color: $black;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+    }
+    .images {
+      width: 50%;
+      height: 500px;
+      position: relative;
+      z-index: 7;
+      @media (max-width: 1440px) {
+        height: 400px;
+      }
+      .top-right {
+        width: 460px;
+        margin-left: 2rem;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+//Card
+.overflow {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 1rem;
+
+  .card {
+    width: 100%;
+    .card-img-top {
+      transform: scale(1);
+      width: 25%;
+      margin: 0 auto;
+      padding: 3rem 0 1rem;
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .card-body {
+    padding: 2rem;
+    h4 {
+    }
+    p {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+      line-height: 1.65;
+    }
+  }
+  &:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  }
+}
+
+//Card grid display
+.rows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
